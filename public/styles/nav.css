@@ -1,0 +1,29 @@
+nav {
+  height: 120px;
+  width: 100vw;
+  background-color: #4056a1;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav span {
+  display: flex;
+  font-family: "Bungee", cursive;
+  margin-left: 1.5em;
+  color: white;
+  font-size: 2em;
+  align-items: center;
+}
+
+nav p {
+  display: flex;
+  flex-direction: column;
+  /*why p and span'em different*/
+  margin: 0 1.5em 0 0;
+  align-items: center;
+  justify-content: center;
+}
+nav p i {
+  color: red;
+}
