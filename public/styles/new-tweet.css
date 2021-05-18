@@ -10,16 +10,19 @@
   color: white;
   font-family: "Bungee", cursive;
 }
+.new-tweet button:hover {
+  cursor: pointer;
+}
 
 .new-tweet textarea {
-  height: 1.5em;
+  height: 2.5em;
   box-sizing: border-box;
   width: 100%;
   outline: 0;
-  border-width: 0 0 0.1em;
-  border-color: #181d2e;
-  resize: vertical;
-  color: #181d2e;
+  border-width: 0 0 0.2em;
+  border-color: #283049;
+  resize: none;
+  color: #283049;
   font-weight: bold;
   background-color: #f4f1ec;
 }

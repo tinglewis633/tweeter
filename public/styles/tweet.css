@@ -1,0 +1,67 @@
+.tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid #283049 0.2em;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+}
+
+.tweet button {
+  background-color: #4056a1;
+  color: white;
+  font-family: "Bungee", cursive;
+}
+
+.tweet textarea {
+  height: 2.5em;
+  box-sizing: border-box;
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 0.2em;
+  border-color: #283049;
+  resize: none;
+  color: #545149;
+  font-weight: bold;
+  background-color: #f4f1ec;
+}
+
+.tweet div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweet form {
+  width: 100%;
+  padding: 1em;
+}
+
+.links i {
+  padding: 0.3em;
+  color: #4056a1;
+}
+
+.links i:hover {
+  cursor: pointer;
+  color: coral;
+}
+
+.tweet-head {
+  padding: 1em;
+  width: 100%;
+}
+
+.tweet-head img {
+  height: 2em;
+}
+
+body .at {
+  color: #b8b4e8;
+  font-weight: bold;
+}
+
+.tweet:hover {
+  box-shadow: 3px 3px 3px 3px;
+}
