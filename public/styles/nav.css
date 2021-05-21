@@ -30,3 +30,38 @@ nav p {
 nav p i {
   color: red;
 }
+
+@media only screen and (max-width: 700px) {
+  nav {
+    height: 120px;
+    width: 100vw;
+    background-color: #4056a1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+  }
+
+  nav span {
+    display: flex;
+    font-family: "Bungee", cursive;
+    margin-left: 1.2em;
+    color: white;
+    font-size: 1.5em;
+    align-items: center;
+  }
+
+  nav p {
+    display: flex;
+    flex-direction: column;
+    /*why p and span'em different*/
+    margin: 0 1.5em 0 0;
+    align-items: center;
+    justify-content: center;
+  }
+  nav p i {
+    color: red;
+  }
+}

@@ -52,36 +52,39 @@
   </nav>
   <body>
     <!-- Top nav bar (fixed) -->
+    <div class="deskbody">
+      <header>
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <br />
+        <div id="name">
+          <h2>Louisa Ting</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <h2 id="alert" style="color: red"></h2>
+          <h2>Compose Tweet</h2>
 
-    <header>
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div>
-        <h2>Louisa Ting</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">
-        <h2 id="alert" style="color: red"></h2>
-        <h2>Compose Tweet</h2>
+          <form id="create-tweet">
+            <textarea
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+          </form>
+        </section>
 
-        <form id="create-tweet">
-          <textarea
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-
-      <section id="shows"></section>
-    </main>
+        <section id="shows"></section>
+      </main>
+    </div>
   </body>
 </html>

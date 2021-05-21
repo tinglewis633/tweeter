@@ -39,3 +39,8 @@
 .new-tweet output {
   font-family: "Bungee", cursive;
 }
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+  }
+}

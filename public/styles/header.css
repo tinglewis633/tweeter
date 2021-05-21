@@ -8,3 +8,17 @@ header {
   justify-content: center;
   align-items: center;
 }
+
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 400px;
+    width: 30vw;
+    margin: 2em;
+    background-color: coral;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -29,6 +29,19 @@ main {
   background-color: #f4f1ec;
   margin: auto;
 }
+
+@media only screen and (min-width: 1024px) {
+  main {
+    width: 50%;
+    background-color: #f4f1ec;
+    margin: auto;
+  }
+
+  .deskbody {
+    display: flex;
+    flex-direction: row;
+  }
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
