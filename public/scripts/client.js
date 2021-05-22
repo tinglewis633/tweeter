@@ -1,3 +1,4 @@
+//take a user's data as object, and append it with html and css
 const createTweetElement = function (data) {
   $("#shows").append(` <section class="tweet">
         <div class="tweet-head">
@@ -29,14 +30,17 @@ const createTweetElement = function (data) {
 $(document).ready(() => {
   $("#create-tweet").submit(function (event) {
     event.preventDefault();
-    if (event.target[0].value.length > 140) {
+    const tweetLength = event.target[0].value.length;
+    const textInput = event.target[0].value;
+    // if tweet greater than 140 characters, empty or null then display error. Otherwise post method to /tweets
+    if (tweetLength > 140) {
       $("#alert").empty();
       $("#alert").append(
         `<i class="fas fa-exclamation-triangle"></i> Please enter tweet less than 140 characters <i class="fas fa-exclamation-triangle"></i>`
       );
       return;
     }
-    if (event.target[0].value !== "" && event.target[0].value !== null) {
+    if (textInput !== "" && textInput !== null) {
       $("#alert").empty();
       const data = $(this).serialize();
 
@@ -56,12 +60,14 @@ $(document).ready(() => {
     loadtweets();
   });
 
+  //get array of object using AJAX, and then loop it to call createTweetElement for every object in reverse order
   const loadtweets = () => {
     const url = `http://localhost:8080/tweets`;
     $.ajax({ url }).then((response) => {
       for (let index = response.length - 1; index >= 0; index--) {
         createTweetElement(response[index]);
       }
+      //use timeago to change time to time ago from now
       timeago.render(document.querySelectorAll(".need_to_be_rendered"));
     });
   };

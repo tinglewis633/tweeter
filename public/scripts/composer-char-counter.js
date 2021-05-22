@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  // --- our code goes here ---
+  // change color when tweetLength goes over 140
 
   const title = $("form textarea");
   const countLeft = $("output");
