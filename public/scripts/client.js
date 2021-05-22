@@ -28,6 +28,11 @@ const createTweetElement = function (data) {
 };
 
 $(document).ready(() => {
+  //show compose new tweet after new tweet from top right corner is clicked
+  $(".new-tweet").hide();
+  $("#create-new-tweet-btn").click(function () {
+    $(".new-tweet").show();
+  });
   $("#create-tweet").submit(function (event) {
     event.preventDefault();
     const tweetLength = event.target[0].value.length;
@@ -49,6 +54,7 @@ $(document).ready(() => {
         url: "/tweets",
         data: data,
       });
+      $(".new-tweet").hide();
     } else {
       $("#alert").empty();
       $("#alert").append(
